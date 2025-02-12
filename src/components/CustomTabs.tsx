@@ -88,6 +88,7 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
               </SwiperSlide>
             ))}
           </Swiper>
+          {/* just for mobile */}
           <div className="rounded-lg md:hidden absolute w-full md:w-1/2 md:relative h-[100%] top-0 md:h-[70vh] max-h-[500px]">
             <img
               src={tabs[activeTab].image}

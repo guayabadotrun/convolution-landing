@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   target = '_self',
 }) => {
-  const baseStyles = "inline-flex py-2 px-14 shadow-md font-normal font-afacad uppercase justify-center rounded-full border-2 border-black transition-colors";
+  const baseStyles = "inline-flex py-2 lg:px-14 px-9 shadow-md font-normal font-afacad uppercase justify-center rounded-full border-2 border-black transition-colors";
   
   const variantStyles = {
     dark: "bg-black-dark text-white hover:bg-white hover:text-black",
