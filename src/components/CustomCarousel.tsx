@@ -61,8 +61,8 @@ const CustomCarousel: React.FC<CustomCarouselProps> = ({ data }) => {
           >
             {data.slides.map((slide, index) => (
               <SwiperSlide key={index} className="relative">
-                <div className="absolute inset-0 bg-gradient-primary opacity-60"></div>
-                <div className="flex flex-col gap-1 h-full justify-center ml-12 p-2 md:p-5 relative text-white z-10">
+                <div className="absolute inset-0 bg-gradient-secondary opacity-60"></div>
+                <div className="flex flex-col gap-1 h-full justify-center ml-12 p-2 md:p-5 relative text-black z-10">
                   <h2 className="text-2xl md:text-4xl font-bold">{slide.title}</h2>
                   <p className="md:text-xl text-base mt-4 mb-8">{slide.description}</p>
                   <div className='flex md:flex-row flex-col gap-2'>
