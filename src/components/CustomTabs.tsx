@@ -100,7 +100,7 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
         </div>
 
         {/* Mitad Derecha: Imagen fija con máscara */}
-        <div className="md:absolute hidden w-full md:w-1/2 md:relative h-[100%] top-0 md:h-[70vh] max-h-[500px]">
+        <div className="md:absolute md:block hidden w-full md:w-1/2 md:relative h-[100%] top-0 md:h-[70vh] max-h-[500px]">
           <img
             src={tabs[activeTab].image}
             alt="Tab Image"
