@@ -73,7 +73,7 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
             }}
             pagination={pagination} // Aplicamos la paginación personalizada
             modules={[Pagination]} // Necesitamos el módulo de Paginación
-            className="w-full h-full vertical md:rounded-l-lg md:rounded-none rounded-t-lg"
+            className="w-full h-full vertical md:rounded-l-lg md:rounded-none rounded-lg"
           >
             {tabs[activeTab].slides.map((slide, index) => (
               <SwiperSlide key={index} className="relative">
@@ -88,10 +88,18 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="rounded-lg md:hidden absolute w-full md:w-1/2 md:relative h-[100%] top-0 md:h-[70vh] max-h-[500px]">
+            <img
+              src={tabs[activeTab].image}
+              alt="Tab Image"
+              className="object-cover w-full h-full rounded-lg  md:rounded-none md:rounded-r-lg"
+            />
+            <div className="absolute inset-0 bg-purple-500 mix-blend-lighten rounded-lg  md:rounded-none md:rounded-r-lg"></div>
+          </div>
         </div>
 
         {/* Mitad Derecha: Imagen fija con máscara */}
-        <div className="w-full md:w-1/2 relative h-[20vh] md:h-[70vh] max-h-[500px]">
+        <div className="absolute w-full md:w-1/2 md:relative h-[100%] top-0 md:h-[70vh] max-h-[500px]">
           <img
             src={tabs[activeTab].image}
             alt="Tab Image"

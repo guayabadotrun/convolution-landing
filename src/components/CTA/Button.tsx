@@ -7,6 +7,7 @@ interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  target?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -15,6 +16,7 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   className = '',
   onClick,
+  target = '_self',
 }) => {
   const baseStyles = "inline-flex py-2 px-14 shadow-md font-normal font-afacad uppercase justify-center rounded-full border-2 border-black transition-colors";
   
@@ -27,7 +29,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <a href={href} className={combinedStyles}>
+      <a href={href} target={target} className={combinedStyles}>
         {children}
       </a>
     );
