@@ -64,8 +64,8 @@ const CustomCarousel: React.FC<CustomCarouselProps> = ({ data }) => {
                 <div className="absolute inset-0 bg-gradient-secondary opacity-60"></div>
                 <div className="flex flex-col gap-1 h-full justify-center ml-12 p-2 md:p-5 relative text-black z-10">
                   <h2 className="text-2xl md:text-4xl font-bold font-anek-latin">{slide.title}</h2>
-                  <p className="md:text-xl text-base mt-4 mb-8 font-afacad">{slide.description}</p>
-                  <div className='flex md:flex-row flex-col gap-2'>
+                  <p className="md:text-xl text-xl mt-4 mb-8 font-afacad">{slide.description}</p>
+                  <div className='flex flex-row gap-2'>
                     {slide.ctas.map((cta: Cta, index: number) => (
                       <Button key={index} variant={cta.variant} href={cta.link}>{cta.text}</Button> 
                     ))}
