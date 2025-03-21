@@ -63,7 +63,7 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
       {/* Contenido de la Tab */}
       <div className="flex flex-col md:flex-row w-full justify-center">
         {/* Mitad Izquierda: Carrusel */}
-        <div className="w-full md:w-1/2 relative h-[50vh] md:h-[70vh] max-h-[500px]">
+        <div className="w-full md:w-1/2 relative h-[60vh] md:h-[70vh] max-h-[500px]">
           <Swiper
             direction="vertical"
             loop={true}

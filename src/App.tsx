@@ -106,7 +106,11 @@ const App = () => {
       slides: [
         {
           title: 'Realistic Switch',
-          description: 'Every ICON is meticulously crafted to achieve stunning realism and authenticity. Using advanced modeling techniques, we ensure each avatar not only embodies your brand’s identity but also clearly reflects the signature Convolution style, creating instant trust and recognition in any digital environment.'
+          description: 'Every ICON is meticulously crafted to achieve stunning realism and authenticity.'
+        },
+        {
+          title: 'LDM powered',
+          description: 'Using advanced modeling techniques, we ensure each avatar not only embodies your brand’s identity but also clearly reflects the signature Convolution style, creating instant trust and recognition in any digital environment.'
         },
       ]
     },
