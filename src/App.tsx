@@ -3,8 +3,8 @@ import Jumbotron, { JumbotronProps } from './components/Jumbotron';
 import ImageWithSidePanels from './components/ImageWithSidePanels/ImageWithSidePanels';
 import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
 import mainImage from './assets/images/main-agent-photo.png';
-import promptSample from './assets/images/autogenerate-prompt.mp4';
-import clientsClick from './assets/images/clients-click.mp4';
+import promptSample from './assets/images/prompt.gif';
+import clientsClick from './assets/images/clients.gif';
 import TopGlitchSeparator from './components/TopGlitchSeparator';
 import PeopleSlider, { CarouselItem } from './components/PeopleSlider';
 import BottomGlitchSeparator from './components/BottomGlitchSeparator';
@@ -173,8 +173,10 @@ const App = () => {
         leftPanel={{
           icon: <ArrowTrendingUpIcon className="w-5 h-5" />,
           title: "Be Social",
+          //media: clientsClick,
           media: clientsClick,
-          mediaType: "video",
+          //mediaType: "video",
+          mediaType: "image",
           mediaAlt: "",
           text: "Interact with your community instantly. Telegram, X, and Discord are now available!"
         }}
@@ -182,7 +184,7 @@ const App = () => {
           icon: <ArrowTrendingUpIcon className="w-5 h-5" />,
           title: "Be Creative",
           media: promptSample,
-          mediaType: "video",
+          mediaType: "image",
           mediaAlt: "",
           text: "Launch your ICON in seconds with powerful AI assistance and customize every detail to match your brand."
         }}
