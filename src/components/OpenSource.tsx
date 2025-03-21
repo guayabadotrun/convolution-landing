@@ -4,7 +4,7 @@ import { Button } from './CTA/Button';
 
 export default function OpenSource() {
     return (
-        <section className="p-2 bg-white dark:bg-gray-900 bg-cover" style={{ backgroundImage: `url(${glitchTop})` }}>
+        <section className="p-2 bg-white bg-cover" style={{ backgroundImage: `url(${glitchTop})` }}>
             <div className="container mx-auto mb-14">
                 <div className="flex flex-col md:flex-row w-full gap-3">
                     <div className="flex flex-col gap-3 md:w-[60%] min-h-[200px] flex-grow">
