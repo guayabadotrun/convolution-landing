@@ -11,27 +11,27 @@ export default function OpenSource() {
                         <div className="p-10 bg-gray-200 border rounded-lg flex flex-col md:flex-row items-left md:gap-0 gap-4 justify-between">
                             <div className='flex flex-row gap-4 items-center'>
                                 <Github></Github>
-                                <p className='font-afacad text-lg'>Explore our Code on GitHub</p>
+                                <p className='font-afacad text-lg'>Create, customize and earn rewards without writing any code</p>
                             </div>
                             <div>
-                                <Button variant='dark' href='https://github.com/ConvolutionSOL' target="_blank" onClick={() => console.log('click')}>Visit our GitHub</Button>
+                                <Button variant='dark' href='#' /*href='https://github.com/ConvolutionSOL'*/ target="_blank" onClick={() => console.log('click')}>Launch</Button>
                             </div>
                         </div>
                         <div className="p-10 bg-gray-200 border rounded-lg h-full flex flex-col justify-center">
-                            <h3 className='md:text-4xl text-xl md:font-light font-anek-latin font-bold'>We believe in open source.</h3>
+                            <h3 className='md:text-4xl text-xl md:font-light font-anek-latin font-bold'>Join the future of digital agents.</h3>
                             <p className='text-lg my-4 font-afacad'>
-                                All our code is available on GitHub for you to explore, use, and contribute to.
+                            Connect, collaborate, and innovate with creators worldwide. Stay updated, participate in events, and shape the future of Convolution together.
                             </p>
                         </div>
                     </div>
                     <div className="flex flex-col md:w-[40%] min-h-[200px] flex-grow">
                         <div className="p-10 bg-gray-200 border rounded-lg relative h-full flex flex-col justify-center">
-                            <h3 className='md:text-4xl text-xl md:font-light font-bold font-anek-latin'>Join the Future of AI Influencers</h3>
+                            <h3 className='md:text-4xl text-xl md:font-light font-bold font-anek-latin'>Discover how to create an ICON</h3>
                             <div>
                                 <p className='text-lg my-4 font-afacad'>
-                                    Unlock the potential of AI-driven marketing with personalized digital ambassadors.
+                                Dive deeper into the mechanisms, rewards, and potential of the Convolution ecosystem. Visit our GitBook for detailed documentation and tutorials.
                                 </p>
-                                <Button variant='dark' href='#' onClick={() => console.log('click')}>Create now</Button>
+                                <Button variant='dark' href='#' onClick={() => console.log('click')}>Read Gitbook</Button>
                             </div>
                         </div>
                     </div>

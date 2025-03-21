@@ -1,7 +1,7 @@
 // src/components/ImageWithSidePanels/utils.ts
-import { ImageSource } from './types';
+import { MediaSource } from './types';
 
-export const getImageSrc = (image: ImageSource): string => {
+export const getImageSrc = (image: MediaSource): string => {
   if (typeof image === 'string') {
     return image;
   }

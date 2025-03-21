@@ -40,7 +40,7 @@ const PeopleSlider: React.FC<PeopleSliderProps> = ({ title, subtitle, items }) =
       {/* Header Section */}
       <div className="text-center md:w-8/12 w-full px-4 mb-24 py-5">
         <h1 className="text-5xl font-anek-latin font-bold mb-4 md:text-5xl text-white">{title}</h1>
-        <p className="text-2xl font-afacad text-white">{subtitle}</p>
+        <p className="text-2xl font-afacad text-white max-w-3xl mx-auto">{subtitle}</p>
       </div>
 
       {/* Carousel Container */}

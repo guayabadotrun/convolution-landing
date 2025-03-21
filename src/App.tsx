@@ -81,37 +81,33 @@ const App = () => {
   ];
   const tabs = [
     {
-      title: 'Cartoon',
-      subtitle: "Fun, vibrant, and expressive. Perfect for engaging younger audiences and creating a playful brand identity.",
+      title: 'Anime',
+      subtitle: "Fun, vibrant, and expressive. Perfect for engaging Web3 audiences and creating a playful brand identity.",
       icon: <ArrowUp size={20} />, 
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
       image: sample5,
       slides: [
         {
-          title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et mollis mauris. Nulla sagittis.'
+          title: 'Unique Branding',
+          description: 'Every ICON carries a distinctive visual identity. We use advanced modeling techniques to ensure that every avatar clearly represents the Convolution brand, recognizable across the digital space.'
         },
         {
-          title: 'Title',
-          description: 'Description'
+          title: 'LDM powered',
+          description: 'Using advanced modeling techniques, we ensure each avatar not only embodies your brand’s identity but also clearly reflects the signature Convolution style, creating instant trust and recognition in any digital environment.'
         }
       ]
     },
     {
-      title: 'Hyper-realism',
-      subtitle: "Detailed, lifelike, and immersive. Ideal for building trust and creating a strong sense of realism.",
+      title: 'Realistic',
+      subtitle: "Detailed, lifelike, and immersive. Perfect for building credibility, trust, and delivering a sophisticated sense of realism.",
       icon: <ArrowUp size={20} />, 
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
       image: sample2,
       slides: [
         {
-          title: 'Title',
-          description: 'Description'
+          title: 'Realistic Switch',
+          description: 'Every ICON is meticulously crafted to achieve stunning realism and authenticity. Using advanced modeling techniques, we ensure each avatar not only embodies your brand’s identity but also clearly reflects the signature Convolution style, creating instant trust and recognition in any digital environment.'
         },
-        {
-          title: 'Title',
-          description: 'Description'
-        }
       ]
     },
   ];
@@ -120,8 +116,8 @@ const App = () => {
       image: sample5,
       slides: [
         {
-          title: "Choose your AI agent's look. Customize their personalities in seconds.",
-          description: "Create, manage, and deploy AI influencers that represent your brand and engage your target audience 24/7.",
+          title: "Your Creativity Pays Off",
+          description: "Agents that captivate audiences and boost engagement across social media earn daily rewards.",
           ctas: [
             {
               text: "Launch app",
@@ -131,8 +127,8 @@ const App = () => {
           ],
         },
         {
-          title: 'Better results',
-          description: 'Step into the future of marketing with AI-powered personas that amplify your message and drive unparalleled results.',
+          title: 'Earn from Engagement',
+          description: 'Top-performing agents receive rewards sourced from liquidity pool fees and daily token unlocks.',
           ctas: [
             {
               text: "Create",
@@ -144,6 +140,17 @@ const App = () => {
               link: "#",
               variant: "light",
             }
+          ],
+        },
+        {
+          title: 'Rewarding Your Impact',
+          description: 'Turn your digital influence into tangible gains, innovate, engage, and get rewarded daily!',
+          ctas: [
+            {
+              text: "Launch App",
+              link: "#",
+              variant: "dark",
+            },
           ],
         }
       ]
@@ -161,7 +168,7 @@ const App = () => {
         mainMediaAlt="Kai agent portrait"
         leftPanel={{
           icon: <ArrowTrendingUpIcon className="w-5 h-5" />,
-          title: "Be closer",
+          title: "Be Social",
           media: clientsClick,
           mediaType: "video",
           mediaAlt: "",
@@ -169,11 +176,11 @@ const App = () => {
         }}
         rightPanel={{
           icon: <ArrowTrendingUpIcon className="w-5 h-5" />,
-          title: "Fast and easy",
+          title: "Be Creative",
           media: promptSample,
           mediaType: "video",
           mediaAlt: "",
-          text: "Launch your ICON in seconds with the help or AI and modify what you want to personalize."
+          text: "Launch your ICON in seconds with powerful AI assistance and customize every detail to match your brand."
         }}
       />
 
@@ -184,7 +191,7 @@ const App = () => {
       <BottomGlitchSeparator/>
 
       <CustomTabs
-        title="Choose Your Style: Anime or Hyperrealistic"
+        title="Choose Your Style: Anime or Realistic"
         subtitle={<>Transform your digital presence with <b>ICONs</b> that align with your brand identity. Customize your <b>ICON’s</b> appearance to match your audience, choosing between two distinct visual styles.</>}
         tabs={tabs}
       />

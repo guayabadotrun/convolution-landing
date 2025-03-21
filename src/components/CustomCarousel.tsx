@@ -78,8 +78,8 @@ const CustomCarousel: React.FC<CustomCarouselProps> = ({ data }) => {
       </div>
       {/* Claim */}
       <div className='md:w-8/12 mx-auto mt-20'>
-            <h3 className='text-2xl font-bold font-anek-latin text-center'>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et mollis mauris. Nulla sagittis imperdiet.”
+            <h3 className='text-2xl font-bold font-anek-latin text-center max-w-2xl mx-auto'>
+            “Empowering creativity, rewarding influence, welcome to the future of digital interaction.”
             </h3>
       </div>
     </div>
