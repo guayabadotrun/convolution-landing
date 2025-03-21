@@ -1,5 +1,5 @@
-import { Github } from 'lucide-react';
 import glitchTop from '../assets/images/glitch-top.svg';
+import convolutionLogo from '../assets/images/convolution-logo-black.svg'
 import { Button } from './CTA/Button';
 
 export default function OpenSource() {
@@ -10,7 +10,7 @@ export default function OpenSource() {
                     <div className="flex flex-col gap-3 md:w-[60%] min-h-[200px] flex-grow">
                         <div className="p-10 bg-gray-200 border rounded-lg flex flex-col md:flex-row items-left md:gap-0 gap-4 justify-between">
                             <div className='flex flex-row gap-4 items-center'>
-                                <Github></Github>
+                                <div><img className='h-8 saturate-100' src={convolutionLogo} /> </div>
                                 <p className='font-afacad text-lg'>Create, customize and earn rewards without writing any code</p>
                             </div>
                             <div>
