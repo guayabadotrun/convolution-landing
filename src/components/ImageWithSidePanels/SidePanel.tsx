@@ -29,7 +29,7 @@ const SidePanel: FC<SidePanelProps> = ({
       </p>
       <div className={`relative overflow-hidden transition-transform hover:scale-105 ${rotationClass}`}>
         {mediaType === 'video' ? (
-          <video autoPlay loop muted className="w-full h-48 object-cover rounded-lg">
+          <video autoPlay loop muted playsInline preload={'auto'} controls={false} className="w-full h-48 object-cover rounded-lg">
             <source src={getImageSrc(media)} type="video/mp4" />
             Tu navegador no soporta el video.
           </video>
