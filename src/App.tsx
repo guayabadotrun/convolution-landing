@@ -3,6 +3,8 @@ import Jumbotron, { JumbotronProps } from './components/Jumbotron';
 import ImageWithSidePanels from './components/ImageWithSidePanels/ImageWithSidePanels';
 import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
 import mainImage from './assets/images/main-agent-photo.png';
+import promptSample from './assets/images/autogenerate-prompt.mp4';
+import clientsClick from './assets/images/clients-click.mp4';
 import TopGlitchSeparator from './components/TopGlitchSeparator';
 import PeopleSlider, { CarouselItem } from './components/PeopleSlider';
 import BottomGlitchSeparator from './components/BottomGlitchSeparator';
@@ -21,7 +23,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   const jumbotronData: JumbotronProps = {
-    title: "Create, customize, and launch AI-powered digital influencers with ease. Whether you’re a brand, a creator, or a business, Convolution gives you the tools to bring your AI influencer to life.",
+    title: <>With Convolution, you’re not just creating avatars—you’re launching <b>ICONs</b> that shape conversations, build communities, and redefine digital presence in the Solana-powered universe.</>,
     ctas: [
       {
         text: "Create",
@@ -35,8 +37,8 @@ const App = () => {
       }
     ],
   };
-  const agentsCarouselTitle = 'Elevate your brand with AI Agents';
-  const agentsCarouselSubtitle = "Our platform empowers you to design and deploy sophisticated AI agents tailored to your brand's unique needs. From content creation and social media engagement to customer service and lead generation, your AI influencers are ready to elevate your brand to new heights.";
+  const agentsCarouselTitle = 'Elevate your influence with ICONs';
+  const agentsCarouselSubtitle = <>Our platform empowers you to design and deploy <b>ICONs</b> tailored to your brand’s unique needs in a few seconds.</>;
   const agentsCarouselData: CarouselItem[] = [
     {
       image: sample1,
@@ -155,21 +157,23 @@ const App = () => {
       <Jumbotron title={jumbotronData.title} ctas={jumbotronData.ctas}></Jumbotron>
 
       <ImageWithSidePanels
-        mainImage={mainImage}
-        mainImageAlt="Kai agent portrait"
+        mainMedia={mainImage}
+        mainMediaAlt="Kai agent portrait"
         leftPanel={{
           icon: <ArrowTrendingUpIcon className="w-5 h-5" />,
           title: "Be closer",
-          image: mainImage,
-          imageAlt: "",
+          media: clientsClick,
+          mediaType: "video",
+          mediaAlt: "",
           text: "Interact with your community instantly. Telegram, X, and Discord are now available!"
         }}
         rightPanel={{
           icon: <ArrowTrendingUpIcon className="w-5 h-5" />,
-          title: "Always available",
-          image: mainImage,
-          imageAlt: "",
-          text: "Do you want to give 24/7 support? Let your agent work."
+          title: "Fast and easy",
+          media: promptSample,
+          mediaType: "video",
+          mediaAlt: "",
+          text: "Launch your ICON in seconds with the help or AI and modify what you want to personalize."
         }}
       />
 
@@ -180,8 +184,8 @@ const App = () => {
       <BottomGlitchSeparator/>
 
       <CustomTabs
-        title="Choose Your Style: Cartoon or Hyperrealistic"
-        subtitle="Transform your digital presence with AI agents that match your brand identity. Choose between two distinct visual styles to create authentic connections with your target audience, each designed to deliver unique engagement experiences."
+        title="Choose Your Style: Anime or Hyperrealistic"
+        subtitle={<>Transform your digital presence with <b>ICONs</b> that align with your brand identity. Customize your <b>ICON’s</b> appearance to match your audience, choosing between two distinct visual styles.</>}
         tabs={tabs}
       />
 

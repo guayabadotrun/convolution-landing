@@ -1,32 +1,36 @@
 // src/components/ImageWithSidePanels/types.ts
 import { ReactNode } from 'react';
 
-export type ImageSource = string | { default: string };
+export type MediaSource = string | { default: string };
 
 export interface SidePanelProps {
   icon: ReactNode;
   title: string;
-  image: ImageSource;
-  imageAlt: string;
+  media: MediaSource;
+  mediaType?: 'image' | 'video'; // Por defecto se tratará como imagen
+  mediaAlt: string;
   position: 'left' | 'right';
   text: string;
 }
 
 export interface ImageWithSidePanelsProps {
-  mainImage: ImageSource;
-  mainImageAlt: string;
+  mainMedia: MediaSource;
+  mainMediaType?: 'image' | 'video';
+  mainMediaAlt: string;
   leftPanel: {
     icon: ReactNode;
     title: string;
-    image: ImageSource;
-    imageAlt: string;
+    media: MediaSource;
+    mediaType?: 'image' | 'video';
+    mediaAlt: string;
     text: string;
   };
   rightPanel: {
     icon: ReactNode;
     title: string;
-    image: ImageSource;
-    imageAlt: string;
+    media: MediaSource;
+    mediaType?: 'image' | 'video';
+    mediaAlt: string;
     text: string;
   };
 }

@@ -6,16 +6,17 @@ import { getImageSrc } from './utils';
 const SidePanel: FC<SidePanelProps> = ({
   icon,
   title,
-  image,
-  imageAlt,
+  media,
+  mediaType = 'image', // Por defecto se tratará como imagen si no se especifica
+  mediaAlt,
   position,
   text,
 }) => {
-  const rotationClass = position === 'left' ? 'rotate-6' : '-rotate-6';
+  const rotationClass = position === 'left' ? 'rotate-3' : '-rotate-3';
   
   return (
     <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-lg relative z-1">
-      <div className='flex flex-row items-center gap-1 w-full'>
+      <div className="flex flex-row items-center gap-1 w-full">
         <div className="text-4xl text-black-light mb-4">
           {icon}
         </div>
@@ -23,15 +24,22 @@ const SidePanel: FC<SidePanelProps> = ({
           {title}
         </h3>
       </div>
-      <p className='text-sm text-black-light mb-6'>
+      <p className="text-sm text-black-light mb-6">
         {text}
       </p>
       <div className={`relative overflow-hidden transition-transform hover:scale-105 ${rotationClass}`}>
-        <img 
-          src={getImageSrc(image)} 
-          alt={imageAlt}
-          className="w-full h-48 object-cover rounded-lg"
-        />
+        {mediaType === 'video' ? (
+          <video autoPlay loop muted className="w-full h-48 object-cover rounded-lg">
+            <source src={getImageSrc(media)} type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+        ) : (
+          <img 
+            src={getImageSrc(media)} 
+            alt={mediaAlt}
+            className="w-full h-48 object-cover rounded-lg"
+          />
+        )}
       </div>
     </div>
   );

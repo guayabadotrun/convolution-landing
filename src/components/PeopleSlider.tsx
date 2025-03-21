@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Importar el CSS correcto de Swiper
 import 'swiper/css/pagination'; // Asegúrate de importar el CSS para la paginación
@@ -21,7 +21,7 @@ export type CarouselItem = {
 
 interface PeopleSliderProps {
   title: string;
-  subtitle: string;
+  subtitle: string|ReactNode;
   items: CarouselItem[];
 }
 
@@ -40,7 +40,7 @@ const PeopleSlider: React.FC<PeopleSliderProps> = ({ title, subtitle, items }) =
       {/* Header Section */}
       <div className="text-center md:w-8/12 w-full px-4 mb-24 py-5">
         <h1 className="text-5xl font-anek-latin font-bold mb-4 md:text-5xl text-white">{title}</h1>
-        <p className="text-xl conf-afacad text-white">{subtitle}</p>
+        <p className="text-2xl font-afacad text-white">{subtitle}</p>
       </div>
 
       {/* Carousel Container */}

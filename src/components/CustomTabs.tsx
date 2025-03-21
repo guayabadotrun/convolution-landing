@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'; // Importar el CSS correcto de Swiper
 import 'swiper/css/pagination'; // Importar la paginación de Swiper
@@ -16,7 +16,7 @@ type Tab = {
 
 interface Props {
   title: string;
-  subtitle: string;
+  subtitle: string|ReactNode;
   tabs: Tab[];
 }
 
@@ -36,7 +36,7 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
       {/* Título y Subtítulo */}
       <div className="text-center mb-20 md:w-5/6 w-full px-4">
         <h1 className="text-4xl md:text-5xl font-anek-latin font-bold text-black">{title}</h1>
-        <p className="text-lg md:text-xl text-black mt-4">{subtitle}</p>
+        <p className="text-2xl text-black font-afacad mt-4">{subtitle}</p>
       </div>
 
       {/* Tabs de Navegación */}
@@ -55,7 +55,7 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
               <span className='text-base font-anek-latin font-bold'>{tab.title}</span>
               {activeTab === index && <span className='hidden md:inline-block'>{tab.icon}</span>}
             </div>
-            <p className="text-afacad text-xl md:block hidden">{tab.subtitle}</p>
+            <p className="text-xl md:block hidden font-afacad">{tab.subtitle}</p>
           </div>
         ))}
       </div>
@@ -79,8 +79,8 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
               <SwiperSlide key={index} className="relative">
                 <div className="absolute inset-0 bg-gradient-primary opacity-60"></div>
                 <div className="flex flex-col gap-1 h-full justify-center ml-12 p-2 md:p-5 relative text-white z-10">
-                  <h2 className="text-3xl md:text-4xl font-bold">{slide.title}</h2>
-                  <p className="text-xl mt-4 mb-8">{slide.description}</p>
+                  <h2 className="text-3xl md:text-4xl font-bold font-anek-latin">{slide.title}</h2>
+                  <p className="text-xl mt-4 mb-8 font-afacad">{slide.description}</p>
                   <div>
                     <Button variant="dark" href="#" onClick={() => console.log('clicked')}>Lorem ipsum</Button>
                   </div>
