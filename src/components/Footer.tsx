@@ -6,14 +6,13 @@ export default function Footer() {
                 <p className="text-white text-afacad text-sm">2025 © convolution.agency</p>
                 <div className="flex md:flex-row flex-col gap-3">
                     <p className="text-white text-afacad text-sm">
-                        <a href="#" target="_blank">About</a>
+                        <a href="https://convolution.gitbook.io/doc/1.-project-overview" target="_blank">About</a>
                     </p>
 
                     <p className="text-white text-afacad text-sm hidden md:block">/</p>
                     <p className="text-white text-afacad text-sm">
-                        <a href="#" target="_blank">Whitepaper</a>
+                        <a href="https://convolution.gitbook.io/doc/4.-tokenomics" target="_blank">Whitepaper</a>
                     </p>
-
                     <p className="text-white text-afacad text-sm hidden md:block">/</p>
                     <p className="text-white text-afacad text-sm">
                         <a href="https://x.com/ConvolutionSOL" target="_blank">X</a>
@@ -21,7 +20,7 @@ export default function Footer() {
 
                     <p className="text-white text-afacad text-sm hidden md:block">/</p>
                     <p className="text-white text-afacad text-sm">
-                        <a href="https://github.com/ConvolutionSOL" target="_blank">GitHub</a>
+                        <a href="https://convolution.gitbook.io/doc" target="_blank">Doc</a>
                     </p>
                 </div>
             </div>

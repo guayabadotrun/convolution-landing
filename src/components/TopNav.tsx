@@ -4,8 +4,8 @@ import mainLogo from '../assets/images/convolution-logo-main.svg'
 import { Button } from './CTA/Button'
 
 const navigation = [
-  { name: 'About', href: '#', current: false },
-  { name: 'Whitepaper', href: '#', current: false },
+  { name: 'About', href: 'https://convolution.gitbook.io/doc/1.-project-overview', current: false },
+  { name: 'Whitepaper', href: 'https://convolution.gitbook.io/doc/4.-tokenomics', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -42,7 +42,7 @@ export default function TopNav() {
                     {item.name}
                   </a>
                 ))}
-                <Button variant="dark" href="#" onClick={() => console.log('Coming soon!')}>Launch App</Button>
+                <Button variant="dark" href="https://app.convolution.agency">Launch App</Button>
               </div>
             </div>
           </div>

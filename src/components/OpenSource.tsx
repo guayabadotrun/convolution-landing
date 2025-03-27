@@ -14,7 +14,7 @@ export default function OpenSource() {
                                 <p className='font-afacad text-lg'>Create, customize and earn rewards without writing any code</p>
                             </div>
                             <div>
-                                <Button variant='dark' href='#' /*href='https://github.com/ConvolutionSOL'*/ target="_blank" onClick={() => console.log('click')}>Launch</Button>
+                                <Button variant='dark' href='https://app.convolution.agency' /*href='https://github.com/ConvolutionSOL'*/ target="_blank" onClick={() => console.log('click')}>Launch</Button>
                             </div>
                         </div>
                         <div className="p-10 bg-gray-200 border rounded-lg h-full flex flex-col justify-center">
@@ -31,7 +31,7 @@ export default function OpenSource() {
                                 <p className='text-lg my-4 font-afacad'>
                                 Dive deeper into the mechanisms, rewards, and potential of the Convolution ecosystem. Visit our GitBook for detailed documentation and tutorials.
                                 </p>
-                                <Button variant='dark' href='#' onClick={() => console.log('click')}>Read Gitbook</Button>
+                                <Button variant='dark' href='https://convolution.gitbook.io/doc' onClick={() => console.log('click')}>Read Gitbook</Button>
                             </div>
                         </div>
                     </div>

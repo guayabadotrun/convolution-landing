@@ -82,7 +82,7 @@ const CustomTabs: React.FC<Props> = ({ title, subtitle, tabs }) => {
                   <h2 className="text-3xl md:text-4xl font-bold font-anek-latin">{slide.title}</h2>
                   <p className="text-xl mt-4 mb-8 font-afacad">{slide.description}</p>
                   <div>
-                    <Button variant="dark" href="#" onClick={() => console.log('clicked')}>HOW TO</Button>
+                    <Button variant="dark" href="https://convolution.gitbook.io/doc" target='_blank' onClick={() => console.log('clicked')}>HOW TO</Button>
                   </div>
                 </div>
               </SwiperSlide>

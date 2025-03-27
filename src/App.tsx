@@ -28,12 +28,12 @@ const App = () => {
     ctas: [
       {
         text: "Create",
-        link: "#",
+        link: "https://app.convolution.agency",
         variant: "dark",
       },
       {
         text: "How to",
-        link: "#",
+        link: "https://convolution.gitbook.io/doc",
         variant: "light",
       }
     ],
@@ -134,7 +134,7 @@ const App = () => {
           ctas: [
             {
               text: "Launch app",
-              link: "#",
+              link: "https://app.convolution.agency",
               variant: "dark",
             },
           ],
@@ -145,12 +145,12 @@ const App = () => {
           ctas: [
             {
               text: "Create",
-              link: "#",
+              link: "https://app.convolution.agency",
               variant: "dark",
             },
             {
               text: "How to",
-              link: "#",
+              link: "https://convolution.gitbook.io/doc",
               variant: "light",
             }
           ],
@@ -161,7 +161,7 @@ const App = () => {
           ctas: [
             {
               text: "Launch App",
-              link: "#",
+              link: "https://app.convolution.agency",
               variant: "dark",
             },
           ],
