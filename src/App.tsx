@@ -14,6 +14,7 @@ import sample2 from "./assets/images/sample/people-3.png";
 import sample3 from "./assets/images/sample/people-2.png";
 import sample4 from "./assets/images/sample/people-4.png";
 import sample5 from "./assets/images/sample/people-5.png";
+import sample6 from "./assets/images/sample/social-media-dashboard.png";
 import CustomTabs from './components/CustomTabs';
 import { ArrowUp } from 'lucide-react';
 import CustomCarousel, { CustomCarouselProps } from './components/CustomCarousel';
@@ -45,18 +46,22 @@ const App = () => {
       title: "Sarah Johnson",
       subtitle: "Lifestyle & Travel",
       socialLinks: {
+        /*
         instagram: "#",
         twitter: "#",
         facebook: "#"
+        */
       }
     },
     {
       image: sample2,
-      title: "Mike Thompson",
+      title: "Eva Croft",
       subtitle: "Fitness & Health",
       socialLinks: {
+        /*
         instagram: "#",
         twitter: "#"
+        */
       }
     },
     {
@@ -64,17 +69,21 @@ const App = () => {
       title: "Emma Davis",
       subtitle: "Fashion & Beauty",
       socialLinks: {
+        /*
         instagram: "#",
         facebook: "#"
+        */
       }
     },
     {
       image: sample4,
-      title: "Emma Davis",
-      subtitle: "Fashion & Beauty",
+      title: "Daisy Williams",
+      subtitle: "e-Learning",
       socialLinks: {
+        /*
         instagram: "#",
         facebook: "#"
+        */
       }
     },
     // Añade más items según necesites
@@ -117,7 +126,7 @@ const App = () => {
   ];
   const videoWithCarousel: CustomCarouselProps = {
     data: {
-      image: sample5,
+      image: sample6,
       slides: [
         {
           title: "Your Creativity Pays Off",
