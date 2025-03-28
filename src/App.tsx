@@ -21,6 +21,7 @@ import CustomCarousel, { CustomCarouselProps } from './components/CustomCarousel
 import ClaimBlock from './components/ClaimBlock';
 import OpenSource from './components/OpenSource';
 import Footer from './components/Footer';
+import Marquee from './components/Marquee';
 
 const App = () => {
   const jumbotronData: JumbotronProps = {
@@ -170,8 +171,20 @@ const App = () => {
     }
   };
 
+  const marqueeText = "TOKEN ($CON): Eda9RsTjhEjP4Uxjhp1gW2c9cJqokNMbQoUUdzFcpump";
+  const copyableText = "Eda9RsTjhEjP4Uxjhp1gW2c9cJqokNMbQoUUdzFcpump";
+
   return (
     <>
+      <Marquee 
+        text={marqueeText} 
+        copyableText={copyableText}
+        backgroundColor="bg-white" 
+        textColor="text-black"
+        className="hover:bg-gray-200"
+        spacing={200}
+        speed={0.7}
+      />
       <TopNav></TopNav>
       
       <Jumbotron title={jumbotronData.title} ctas={jumbotronData.ctas}></Jumbotron>
