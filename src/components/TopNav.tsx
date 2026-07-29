@@ -4,8 +4,8 @@ import mainLogo from '../assets/images/convolution-logo-main.svg'
 import { Button } from './CTA/Button'
 
 const navigation = [
-  { name: 'About', href: 'https://convolution.gitbook.io/doc/1.-project-overview', current: false },
-  { name: 'Whitepaper', href: 'https://convolution.gitbook.io/doc/4.-tokenomics', current: false },
+  { name: 'About', href: 'https://docs.convolution.agency/about', current: false },
+  { name: 'Whitepaper', href: 'https://docs.convolution.agency/tokenomics', current: false },
 ]
 
 function classNames(...classes: string[]) {

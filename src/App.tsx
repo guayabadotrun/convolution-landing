@@ -36,7 +36,7 @@ const App = () => {
       },
       {
         text: "How to",
-        link: "https://convolution.gitbook.io/doc",
+        link: "https://docs.convolution.agency",
         variant: "light",
       }
     ],
@@ -153,7 +153,7 @@ const App = () => {
             },
             {
               text: "How to",
-              link: "https://convolution.gitbook.io/doc",
+              link: "https://docs.convolution.agency",
               variant: "light",
             }
           ],
