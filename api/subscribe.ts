@@ -6,7 +6,7 @@ const EMAIL_META_PREFIX = 'convolution:notify:meta:';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export const config = {
-  runtime: 'nodejs',
+  runtime: 'edge',
 };
 
 type SubscribeResponse =
