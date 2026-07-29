@@ -4,9 +4,30 @@ import { XMarkIcon, CheckIcon } from '@heroicons/react/24/outline';
 
 export const LAUNCH_APP_URL = 'https://app.convolution.agency';
 export const OPEN_COMING_SOON_EVENT = 'convolution:open-coming-soon';
+const NOTIFY_COOKIE = 'convolution_notify_email';
+const COOKIE_MAX_AGE_DAYS = 365;
 
 export function openComingSoon() {
   window.dispatchEvent(new CustomEvent(OPEN_COMING_SOON_EVENT));
+}
+
+function readCookie(name: string): string | null {
+  if (typeof document === 'undefined') return null;
+  const match = document.cookie
+    .split('; ')
+    .find((row) => row.startsWith(`${name}=`));
+  if (!match) return null;
+  try {
+    return decodeURIComponent(match.slice(name.length + 1));
+  } catch {
+    return null;
+  }
+}
+
+function writeCookie(name: string, value: string, days: number) {
+  if (typeof document === 'undefined') return;
+  const maxAge = days * 24 * 60 * 60;
+  document.cookie = `${name}=${encodeURIComponent(value)}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;
 }
 
 const ComingSoonModal = () => {
@@ -14,11 +35,14 @@ const ComingSoonModal = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const handler = () => {
       setSubmitted(false);
+      setSubmitting(false);
       setEmail('');
+      setError(null);
       setIsOpen(true);
     };
     window.addEventListener(OPEN_COMING_SOON_EVENT, handler);
@@ -29,10 +53,17 @@ const ComingSoonModal = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!email || submitting) return;
+    if (submitting) return;
+    if (!email) return;
+    const storedEmail = readCookie(NOTIFY_COOKIE);
+    if (storedEmail) {
+      setError(`This email is already on our list. We'll be in touch soon.`);
+      return;
+    }
     setSubmitting(true);
     // Simulate a tiny delay for a snappier feel
     setTimeout(() => {
+      writeCookie(NOTIFY_COOKIE, email, COOKIE_MAX_AGE_DAYS);
       setSubmitting(false);
       setSubmitted(true);
     }, 350);
@@ -97,27 +128,46 @@ const ComingSoonModal = () => {
                       Convolution is putting the final touches on the platform. Leave your email and we'll let you know the moment we go live.
                     </p>
 
-                    <form onSubmit={handleSubmit} className="mt-6 flex flex-col sm:flex-row gap-3">
+                    <form onSubmit={handleSubmit} noValidate className="mt-6 flex flex-col sm:flex-row gap-3">
                       <input
                         type="email"
                         required
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          if (error) setError(null);
+                        }}
                         placeholder="you@domain.com"
                         autoFocus
-                        className="flex-1 rounded-full border-2 border-white/20 bg-white/5 px-5 py-2.5 text-white placeholder-white/40 outline-none transition-colors focus:border-white/60 focus:bg-white/10 font-afacad"
+                        aria-invalid={Boolean(error)}
+                        aria-describedby={error ? 'coming-soon-error' : undefined}
+                        className={`flex-1 rounded-full border-2 bg-white/5 px-5 py-2.5 text-white placeholder-white/40 outline-none transition-colors font-afacad ${
+                          error
+                            ? 'border-red-400/70 focus:border-red-400'
+                            : 'border-white/20 focus:border-white/60 focus:bg-white/10'
+                        }`}
                       />
                       <button
                         type="submit"
                         disabled={submitting}
-                        className="inline-flex items-center justify-center rounded-full border-2 border-white bg-white px-6 py-2.5 font-afacad uppercase text-black-dark transition-colors hover:bg-transparent hover:text-white disabled:opacity-60"
+                        className="inline-flex items-center justify-center rounded-full border-2 border-white bg-white px-6 py-2.5 font-afacad uppercase text-black-dark transition-colors hover:bg-transparent hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
                       >
                         {submitting ? 'Sending…' : 'Notify me'}
                       </button>
                     </form>
-                    <p className="mt-3 text-xs text-white/40 font-afacad">
-                      Press Enter to submit. No spam, ever.
-                    </p>
+                    {error ? (
+                      <p
+                        id="coming-soon-error"
+                        role="alert"
+                        className="mt-3 text-xs text-red-400 font-afacad"
+                      >
+                        {error}
+                      </p>
+                    ) : (
+                      <p className="mt-3 text-xs text-white/40 font-afacad">
+                        Press Enter to submit. No spam, ever.
+                      </p>
+                    )}
                   </>
                 ) : (
                   <div className="flex flex-col items-center text-center py-4 animate-[fadeIn_.3s_ease-out]">
