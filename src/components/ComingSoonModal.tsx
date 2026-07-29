@@ -11,19 +11,6 @@ export function openComingSoon() {
   window.dispatchEvent(new CustomEvent(OPEN_COMING_SOON_EVENT));
 }
 
-function readCookie(name: string): string | null {
-  if (typeof document === 'undefined') return null;
-  const match = document.cookie
-    .split('; ')
-    .find((row) => row.startsWith(`${name}=`));
-  if (!match) return null;
-  try {
-    return decodeURIComponent(match.slice(name.length + 1));
-  } catch {
-    return null;
-  }
-}
-
 function writeCookie(name: string, value: string, days: number) {
   if (typeof document === 'undefined') return;
   const maxAge = days * 24 * 60 * 60;
@@ -55,11 +42,6 @@ const ComingSoonModal = () => {
     e.preventDefault();
     if (submitting) return;
     if (!email) return;
-    const storedEmail = readCookie(NOTIFY_COOKIE);
-    if (storedEmail) {
-      setError(`This email is already on our list. We'll be in touch soon.`);
-      return;
-    }
     setSubmitting(true);
     try {
       const res = await fetch('/api/subscribe', {
