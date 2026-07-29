@@ -51,7 +51,7 @@ const ComingSoonModal = () => {
 
   const close = () => setIsOpen(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (submitting) return;
     if (!email) return;
@@ -61,12 +61,39 @@ const ComingSoonModal = () => {
       return;
     }
     setSubmitting(true);
-    // Simulate a tiny delay for a snappier feel
-    setTimeout(() => {
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = (await res.json().catch(() => null)) as
+        | { ok: true; alreadySubscribed: boolean }
+        | { ok: false; error: string }
+        | null;
+
+      if (!res.ok || !data || data.ok !== true) {
+        const message =
+          data && 'error' in data && data.error
+            ? data.error
+            : 'Something went wrong. Please try again.';
+        setError(message);
+        setSubmitting(false);
+        return;
+      }
+
       writeCookie(NOTIFY_COOKIE, email, COOKIE_MAX_AGE_DAYS);
       setSubmitting(false);
+      if (data.alreadySubscribed) {
+        setError(`This email is already on our list. We'll be in touch soon.`);
+        return;
+      }
       setSubmitted(true);
-    }, 350);
+    } catch (err) {
+      console.error('subscribe failed', err);
+      setError('Network error. Please try again.');
+      setSubmitting(false);
+    }
   };
 
   return (
