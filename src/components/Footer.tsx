@@ -3,7 +3,7 @@ export default function Footer() {
     return (
         <section className="p-4 bg-black -mt-2">
             <div className="container mx-auto flex md:flex-row gap-3 flex-col md:items-center justify-between">
-                <p className="text-white text-afacad text-sm">2025 © convolution.agency</p>
+                <p className="text-white text-afacad text-sm">2026 © convolution.agency</p>
                 <div className="flex md:flex-row flex-col gap-3">
                     <p className="text-white text-afacad text-sm">
                         <a href="https://convolution.gitbook.io/doc/1.-project-overview" target="_blank">About</a>

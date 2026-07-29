@@ -21,6 +21,7 @@ import CustomCarousel, { CustomCarouselProps } from './components/CustomCarousel
 import ClaimBlock from './components/ClaimBlock';
 import OpenSource from './components/OpenSource';
 import Footer from './components/Footer';
+import ComingSoonModal from './components/ComingSoonModal';
 // import Marquee from './components/Marquee';
 
 const App = () => {
@@ -222,6 +223,8 @@ const App = () => {
       <OpenSource></OpenSource>
 
       <Footer></Footer>
+
+      <ComingSoonModal />
     </>
   );
 }
