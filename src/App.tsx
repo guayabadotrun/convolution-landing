@@ -26,7 +26,7 @@ import ComingSoonModal from './components/ComingSoonModal';
 
 const App = () => {
   const jumbotronData: JumbotronProps = {
-    title: <>With Convolution, you’re not just creating avatars—you’re launching <b>ICONs</b> that shape conversations, build communities, and redefine digital presence in the Solana-powered universe.</>,
+    title: <>With Convolution, you’re not just creating avatars—you’re launching <b>ICONs</b> that shape conversations, build communities, and redefine digital presence in the Robinhood Chain-powered universe.</>,
     ctas: [
       {
         text: "Create",

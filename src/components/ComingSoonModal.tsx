@@ -93,18 +93,6 @@ const ComingSoonModal = () => {
             leaveTo="opacity-0 scale-95"
           >
             <DialogPanel className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-white/10 bg-black-dark text-white shadow-2xl">
-              {/* Gradient glow */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -top-24 -left-24 h-64 w-64 rounded-full opacity-40 blur-3xl"
-                style={{ background: 'radial-gradient(circle, #6E1FCE 0%, transparent 70%)' }}
-              />
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full opacity-40 blur-3xl"
-                style={{ background: 'radial-gradient(circle, #82EAFF 0%, transparent 70%)' }}
-              />
-
               <button
                 type="button"
                 onClick={close}
@@ -172,11 +160,7 @@ const ComingSoonModal = () => {
                 ) : (
                   <div className="flex flex-col items-center text-center py-4 animate-[fadeIn_.3s_ease-out]">
                     <div className="relative mb-6">
-                      <div
-                        className="absolute inset-0 rounded-full blur-2xl opacity-70"
-                        style={{ background: 'linear-gradient(90deg, #6E1FCE 0%, #82EAFF 100%)' }}
-                      />
-                      <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-primary">
+                      <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-black-dark border-2 border-white/20">
                         <CheckIcon className="h-10 w-10 text-white" strokeWidth={3} />
                       </div>
                     </div>
