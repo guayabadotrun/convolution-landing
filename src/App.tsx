@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import TopNav from './components/TopNav';
 import Jumbotron, { JumbotronProps } from './components/Jumbotron';
 import ImageWithSidePanels from './components/ImageWithSidePanels/ImageWithSidePanels';
@@ -225,6 +226,8 @@ const App = () => {
       <Footer></Footer>
 
       <ComingSoonModal />
+
+      <Analytics />
     </>
   );
 }
