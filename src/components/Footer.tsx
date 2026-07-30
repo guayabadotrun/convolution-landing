@@ -6,7 +6,7 @@ export default function Footer() {
                 <p className="text-white text-afacad text-sm">2026 © convolution.agency</p>
                 <div className="flex md:flex-row flex-col gap-3">
                     <p className="text-white text-afacad text-sm">
-                        <a href="https://docs.convolution.agency/about" target="_blank">About</a>
+                        <a href="https://docs.convolution.agency" target="_blank">About</a>
                     </p>
 
                     <p className="text-white text-afacad text-sm hidden md:block">/</p>

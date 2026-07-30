@@ -4,13 +4,9 @@ import mainLogo from '../assets/images/convolution-logo-main.svg'
 import { Button } from './CTA/Button'
 
 const navigation = [
-  { name: 'About', href: 'https://docs.convolution.agency/about', current: false },
+  { name: 'About', href: 'https://docs.convolution.agency', current: false },
   { name: 'Whitepaper', href: 'https://docs.convolution.agency/tokenomics', current: false },
 ]
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function TopNav() {
   return (
@@ -33,11 +29,10 @@ export default function TopNav() {
                   <a
                     key={item.name}
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-current={item.current ? 'page' : undefined}
-                    className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium self-center',
-                    )}
+                    className="relative self-center px-3 py-2 font-afacad text-base uppercase tracking-wide text-black transition-colors after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-black after:transition-transform after:duration-300 hover:after:scale-x-100"
                   >
                     {item.name}
                   </a>
@@ -66,11 +61,10 @@ export default function TopNav() {
               key={item.name}
               as="a"
               href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-current={item.current ? 'page' : undefined}
-              className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
-              )}
+              className="block px-3 py-2 font-afacad text-base uppercase tracking-wide text-black hover:underline underline-offset-4"
             >
               {item.name}
             </DisclosureButton>

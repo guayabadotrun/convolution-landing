@@ -825,12 +825,12 @@ video {
   height: 2rem;
 }
 
-.h-\[100\%\] {
-  height: 100%;
+.h-\[0\.9em\] {
+  height: 0.9em;
 }
 
-.h-\[1em\] {
-  height: 1em;
+.h-\[100\%\] {
+  height: 100%;
 }
 
 .h-\[300px\] {
@@ -847,10 +847,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[0\.9em\] {
-  height: 0.9em;
 }
 
 .max-h-\[500px\] {
@@ -885,8 +881,8 @@ video {
   width: 1.25rem;
 }
 
-.w-\[1em\] {
-  width: 1em;
+.w-\[0\.9em\] {
+  width: 0.9em;
 }
 
 .w-auto {
@@ -895,10 +891,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[0\.9em\] {
-  width: 0.9em;
 }
 
 .max-w-2xl {
@@ -941,6 +933,11 @@ video {
   flex-grow: 1;
 }
 
+.-translate-y-\[0\.05em\] {
+  --tw-translate-y: -0.05em;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-0 {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -948,11 +945,6 @@ video {
 
 .translate-y-2 {
   --tw-translate-y: 0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-\[0\.05em\] {
-  --tw-translate-y: -0.05em;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1361,10 +1353,6 @@ video {
   text-align: center;
 }
 
-.align-baseline {
-  vertical-align: baseline;
-}
-
 .align-middle {
   vertical-align: middle;
 }
@@ -1458,6 +1446,10 @@ video {
   letter-spacing: 0.1em;
 }
 
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(35 35 35 / var(--tw-text-opacity, 1));
@@ -1504,6 +1496,10 @@ video {
 
 .text-white\/70 {
   color: rgb(255 255 255 / 0.7);
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 
 .placeholder-white\/40::-moz-placeholder {
@@ -1744,6 +1740,60 @@ video {
   }
 }
 
+.after\:absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.after\:-bottom-0\.5::after {
+  content: var(--tw-content);
+  bottom: -0.125rem;
+}
+
+.after\:left-3::after {
+  content: var(--tw-content);
+  left: 0.75rem;
+}
+
+.after\:right-3::after {
+  content: var(--tw-content);
+  right: 0.75rem;
+}
+
+.after\:h-px::after {
+  content: var(--tw-content);
+  height: 1px;
+}
+
+.after\:origin-left::after {
+  content: var(--tw-content);
+  transform-origin: left;
+}
+
+.after\:scale-x-0::after {
+  content: var(--tw-content);
+  --tw-scale-x: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:bg-black::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 35 35 / var(--tw-bg-opacity, 1));
+}
+
+.after\:transition-transform::after {
+  content: var(--tw-content);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.after\:duration-300::after {
+  content: var(--tw-content);
+  transition-duration: 300ms;
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -1791,6 +1841,16 @@ video {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:after\:scale-x-100:hover::after {
+  content: var(--tw-content);
+  --tw-scale-x: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .focus\:border-red-400:focus {
